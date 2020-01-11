@@ -76,16 +76,18 @@
 									<td colspan="3" >Close Bal:</td>
 									<td style="text-align:right;"><t t-esc="clsoing_balance"/></td>
 								</tr>
+								<tr>
+									<td colspan="3" >Difference:</td>
+									<td style="text-align:right;"><t t-esc="control_diff"/></td>
+								</tr>
+								
 								<t t-foreach='dic_fac' t-as='line'>
                                                                 <tr>
                                                                         <td colspan="2" ><t t-esc="line[0]"/></td>
 									<td ><t t-esc="line[1]"/></td>
                                                                         <td style="text-align:right;"><t t-esc="line[2]"/></td>
                                                                 </tr></t>
-								<tr>
-									<td colspan="3" >Difference:</td>
-									<td style="text-align:right;"><t t-esc="control_diff"/></td>
-								</tr>
+								
 								<tr>
 									<td colspan="3" >Sales:</td>
 									<td style="text-align:right;"><t t-esc="total_paid - taxes" t-options="{'widget': 'float', 'precision': currency_precision}"/></td>
